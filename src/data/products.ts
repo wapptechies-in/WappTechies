@@ -1,0 +1,256 @@
+import { ProductItem } from '../types';
+
+export const PRODUCTS: ProductItem[] = [
+  {
+    id: 'snapfind-ai',
+    slug: 'snapfind-ai',
+    title: 'SnapFind AI',
+    tagline: 'AI-Powered Photo Sharing for Events & Photographers',
+    shortDesc: 'Event photo discovery platform that uses facial recognition so attendees instantly locate their pictures.',
+    description:
+      'SnapFind AI is an intelligent event photography ecosystem built to bridge photographers and event guests. Instead of sifting through thousands of unorganized photos on drives, guests simply scan a QR code, snap a selfie or search by event tag, and instantly retrieve their high-resolution photos.',
+    category: 'AI & Event Technology',
+    status: 'Pilot',
+    accentColor: '#155EEF',
+    accentBg: '#DCEBFF',
+    heroImage: '/images/SnapFind AI_ Every Moment, Easy to Find.png',
+    showcaseImages: [
+      '/images/SnapFind AI_ Every Moment, Easy to Find.png',
+      '/images/SnapFind AI Event Gallery Showcase.png',
+    ],
+    purpose:
+      'To eliminate the manual labor of sorting, tagging, and distributing event photographs while creating an instant, joyful discovery experience for wedding and corporate event attendees.',
+    targetAudience: [
+      'Event and wedding photographers handling thousands of raw photos.',
+      'Corporate conference and summit organizers.',
+      'Wedding planners wanting a modern digital takeaway for guests.',
+      'Event attendees seeking immediate access to their candid portraits.',
+    ],
+    problemAddressed: [
+      'Traditional Google Drive or Dropbox links require attendees to manually scroll through thousands of photos.',
+      'Photographers spend hours answering repetitive inquiries requesting individual images.',
+      'High churn and zero lead capture on traditional gallery links.',
+      'Slow download speeds and lack of privacy controls for sensitive event photos.',
+    ],
+    verifiedFeatures: [
+      'Automated facial indexing and instant selfie-based search matching.',
+      'Photographer web dashboard with multi-event folder management.',
+      'Custom QR code generation for on-site display at event tables.',
+      'Mobile-responsive attendee gallery with instant one-tap high-res downloads.',
+      'Watermarking and customizable photographer branding headers.',
+    ],
+    plannedCapabilities: [
+      'Instant WhatsApp dispatch of recognized photos directly to attendees.',
+      'Real-time live photo uploads during ongoing gala ceremonies.',
+      'AI-assisted photo curation and automated highlight reel generation.',
+      'Print lab integration for direct-order physical photo albums.',
+    ],
+    keyHighlights: [
+      { label: 'Core AI Technology', value: 'Facial Landmark Embeddings' },
+      { label: 'Target Search Speed', value: 'Sub-second photo retrieval' },
+      { label: 'Access Method', value: 'Zero-app web scan & selfie' },
+      { label: 'Engineering Stage', value: 'Functional Pilot & Testing' },
+    ],
+  },
+  {
+    id: 'ull-oor-auto',
+    slug: 'ull-oor-auto',
+    title: 'Ull Oor Auto',
+    tagline: 'Local Auto Booking App — Faster • Safer • Affordable',
+    shortDesc: 'Community-first local mobility designed for regional towns and everyday transit journeys.',
+    description:
+      'Ull Oor Auto (உள்ளூர் ஆட்டோ) is a localized ride-hailing and auto-rickshaw coordination platform engineered specifically for semi-urban and rural hubs across Tamil Nadu. It bridges local auto drivers and residents with clear upfront fares, live route tracking, and bilingual Tamil/English interfaces.',
+    category: 'Mobility & Urban Logistics',
+    status: 'Prototype',
+    accentColor: '#F59E0B',
+    accentBg: '#FEF3C7',
+    heroImage: '/images/Ull Oor Auto_ Your Local Ride.png',
+    showcaseImages: [
+      '/images/Ull Oor Auto_ Your Local Ride.png',
+      '/images/Ull Oor Auto App Showcase.png',
+    ],
+    purpose:
+      'To provide honest, transparent, and prompt auto-rickshaw mobility for tier-2/tier-3 towns, giving drivers steady local bookings without predatory aggregator commissions.',
+    targetAudience: [
+      'Residents, students, and seniors needing dependable local transit.',
+      'Local auto-rickshaw drivers seeking organized ride requests.',
+      'Visitors and pilgrims arriving at regional railway stations and bus stands.',
+      'Regional town merchants needing prompt parcel transport.',
+    ],
+    problemAddressed: [
+      'Major global ride-hailing apps do not operate reliably in smaller regional towns.',
+      'Uncertainty around fare negotiation and vehicle availability during odd hours.',
+      'Language barriers in complex apps that are not tailored for local drivers.',
+      'Safety concerns for evening and late-night local commutes.',
+    ],
+    verifiedFeatures: [
+      'Intuitive bilingual UI (Tamil & English) with large accessible touch targets.',
+      'Direct pickup and drop-off point selection with landmark recognition.',
+      'Transparent distance-based fare estimation before confirming the ride.',
+      'Driver verification profiles with vehicle numbers and contact buttons.',
+      'Lightweight web and Android app architecture optimized for 4G networks.',
+    ],
+    plannedCapabilities: [
+      'Voice-based ride booking in Tamil for seniors and non-technical riders.',
+      'WhatsApp bot booking for users without the mobile app installed.',
+      'Emergency SOS trigger with local station and family broadcast.',
+      'Integrated UPI QR audio payment confirmation for drivers.',
+    ],
+    keyHighlights: [
+      { label: 'Primary Language', value: 'Tamil & English Bilingual' },
+      { label: 'Target Regions', value: 'Tirunelveli & Regional Hubs' },
+      { label: 'Transit Mode', value: 'Local Auto-Rickshaw Fleet' },
+      { label: 'Development Phase', value: 'Interactive Prototype' },
+    ],
+  },
+  {
+    id: 'dine-easy',
+    slug: 'dine-easy',
+    title: 'Dine Easy',
+    tagline: 'Smarter Dining and Simpler Restaurant Operations',
+    shortDesc: 'All-in-one restaurant POS, kitchen display system (KDS), and digital QR table ordering.',
+    description:
+      'Dine Easy modernizes food service operations with a synchronized management platform. It unites tableside QR digital menus, kitchen order ticket (KOT) displays, waiter tablets, and centralized cashier billing into one cohesive, lightning-fast workflow.',
+    category: 'Hospitality Software',
+    status: 'Prototype',
+    accentColor: '#FF6848',
+    accentBg: '#FFE7E2',
+    heroImage: '/images/Dine Easy Restaurant Management Banner.png',
+    showcaseImages: [
+      '/images/Dine Easy Restaurant Management Banner.png',
+      '/images/Dine Easy Restaurant Platform Showcase.png',
+      '/images/DineEasy Restaurant Management UI Showcase.png',
+    ],
+    purpose:
+      'To eliminate restaurant order bottlenecks, prevent kitchen miscommunications, and accelerate table turnover while delighting diners with modern digital ordering.',
+    targetAudience: [
+      'Dine-in restaurants, cafes, and multi-cuisine bistros.',
+      'Cloud kitchens and quick-service restaurant (QSR) outlets.',
+      'Restaurant captains, kitchen chefs, and floor managers.',
+    ],
+    problemAddressed: [
+      'Handwritten KOTs leading to kitchen order errors and forgotten modifications.',
+      'Slow billing queues at cashier desks during peak meal rush hours.',
+      'High printing expenses whenever menu prices or seasonal dishes change.',
+      'Lack of visibility into real-time table occupancy and item profitability.',
+    ],
+    verifiedFeatures: [
+      'Interactive digital QR menu with photo previews and dietary tags.',
+      'Live Table Status matrix (Available, Occupied, Billing, Cleaning).',
+      'Synchronized Kitchen Display System (KDS) showing order prep timers.',
+      'Fast counter POS with split billing, discounts, and thermal print output.',
+      'Daily sales overview, average order value, and top-selling dish analytics.',
+    ],
+    plannedCapabilities: [
+      'Direct customer UPI checkout at the table without waiting for the waiter.',
+      'Inventory deduction linked in real time to ingredients used in each recipe.',
+      'Customer loyalty points and automated WhatsApp bill receipts.',
+      'Multi-branch franchise centralized reporting.',
+    ],
+    keyHighlights: [
+      { label: 'Station Architecture', value: 'POS • KDS • Tableside QR' },
+      { label: 'Supported Devices', value: 'Touchscreen POS, iPad, Android' },
+      { label: 'Offline Support', value: 'Local LAN fallback support' },
+      { label: 'Development Status', value: 'Comprehensive UI Prototype' },
+    ],
+  },
+  {
+    id: 'lr-consignment-billing',
+    slug: 'lr-consignment-billing',
+    title: 'LR Consignment Billing',
+    tagline: 'Clearer Billing and Better-Managed Freight Consignments',
+    shortDesc: 'Dedicated logistics management for lorry receipts, consignment freight notes, and transport accounts.',
+    description:
+      'Engineered specifically for transport agencies, parcel services, and fleet operators. LR Consignment Billing digitizes the entire lifecycle of Lorry Receipts (LR), vehicle dispatch manifests, consignor/consignee ledger balances, and GST freight invoices.',
+    category: 'Logistics & Supply Chain',
+    status: 'Pilot',
+    accentColor: '#0284C7',
+    accentBg: '#E0F2FE',
+    heroImage: '/images/Smart Logistics Billing Dashboard.png',
+    showcaseImages: [
+      '/images/Smart Logistics Billing Dashboard.png',
+    ],
+    purpose:
+      'To replace error-prone physical LR carbon books with clean, printable, tamper-evident digital consignment records and automated payment reconciliation.',
+    targetAudience: [
+      'Regional goods transport operators and logistics parcel offices.',
+      'Fleet managers and truck booking booking agents.',
+      'Wholesale shipping departments handling daily freight dispatches.',
+    ],
+    problemAddressed: [
+      'Lost physical Lorry Receipts causing dispute in freight settlements.',
+      'Tedious manual calculation of freight, hamali, door-delivery, and GST charges.',
+      'Inability to quickly check pending customer balances and unpaid freight notes.',
+      'Lack of status transparency between dispatch hubs and delivery destinations.',
+    ],
+    verifiedFeatures: [
+      'Rapid Lorry Receipt (LR) generator with automated LR number sequencing.',
+      'Print-ready standard LR formats with terms & conditions and signature blocks.',
+      'Consignment tracking status: Booked, In Transit, At Destination, Delivered.',
+      'Consignor and consignee party ledger with payment status (Paid, Pending).',
+      'Freight billing dashboard summarizing total consignments, revenue, and receivables.',
+    ],
+    plannedCapabilities: [
+      'SMS and WhatsApp delivery notifications with digital LR PDF link.',
+      'Mobile driver delivery sign-off app with digital proof-of-delivery (POD).',
+      'E-Way bill API integration for automated GST compliance.',
+      'Multi-branch transshipment manifests and cross-docking tracking.',
+    ],
+    keyHighlights: [
+      { label: 'Document Standards', value: 'Indian Transport LR Format' },
+      { label: 'GST Compliance', value: 'Freight Reverse Charge & RCM' },
+      { label: 'Interface Target', value: 'Fast keyboard-driven data entry' },
+      { label: 'Status', value: 'Pilot Deployment with Transport Hubs' },
+    ],
+  },
+  {
+    id: 'student-vault',
+    slug: 'student-vault',
+    title: 'Student Vault',
+    tagline: 'A More Organized Way to Manage Student Resources',
+    shortDesc: 'Academic document organizer, syllabus tracker, and assignment timeline for college students.',
+    description:
+      'Student Vault is an academic study companion created to declutter student life. It centralizes course notes, lecture PDFs, assignment deadlines, exam timetables, and subject milestones into a clean, distraction-free digital workspace.',
+    category: 'EdTech & Productivity',
+    status: 'Prototype',
+    accentColor: '#8B5CF6',
+    accentBg: '#EDE9FE',
+    heroImage: '/images/Gemini_Generated_Image_lunm74lunm74lunm.png',
+    showcaseImages: [
+      '/images/Gemini_Generated_Image_lunm74lunm74lunm.png',
+    ],
+    purpose:
+      'To empower university students to organize study materials effortlessly and never miss an assignment deadline or exam date.',
+    targetAudience: [
+      'Undergraduate and postgraduate college students.',
+      'Competitive exam aspirants managing multiple subject syllabi.',
+      'Study groups and student class representatives sharing resource vaults.',
+    ],
+    problemAddressed: [
+      'Important lecture PDFs and notes scattered across WhatsApp groups and email threads.',
+      'Missed assignment submission deadlines due to disorganized reminders.',
+      'Cognitive overload from bloated general-purpose note apps.',
+      'Difficulty tracking overall semester completion progress.',
+    ],
+    verifiedFeatures: [
+      'Subject folder taxonomy (e.g. Calculus, Modern History, Computer Systems).',
+      'Integrated PDF and academic document viewer with categorization tags.',
+      'Upcoming assignment tracker with countdown badges and priority levels.',
+      'Visual semester progress tracker percentage display.',
+      'Monthly academic calendar and timetable agenda view.',
+    ],
+    plannedCapabilities: [
+      'Peer-to-peer secure notes sharing via private class passcodes.',
+      'Flashcards and spaced repetition study modes.',
+      'AI-powered document summarizer for lengthy academic research papers.',
+      'Offline desktop and mobile synchronization.',
+    ],
+    keyHighlights: [
+      { label: 'Design Philosophy', value: 'Distraction-Free Minimalist UI' },
+      { label: 'Document Formats', value: 'PDF, Markdown, Docs, Slides' },
+      { label: 'Core Target', value: 'Higher Education Students' },
+      { label: 'Development Phase', value: 'Functional Concept & UI Spec' },
+    ],
+  },
+];
+

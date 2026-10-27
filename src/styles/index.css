@@ -1,0 +1,291 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: light;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FFF7ED;
+    color: #111827;
+    overflow-x: hidden;
+  }
+
+  /* Smooth Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FAF5EE;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 9999px;
+    border: 2px solid #FAF5EE;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8;
+  }
+}
+
+@layer components {
+  /* Glass panels inspired by the reference */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(233, 229, 223, 0.8);
+    box-shadow: 0 10px 30px -5px rgba(17, 24, 39, 0.05);
+  }
+
+  .glass-card-elevated {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 20px 40px -15px rgba(17, 24, 39, 0.08), 0 0 20px rgba(21, 94, 239, 0.04);
+  }
+
+  .glass-pill {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(233, 229, 223, 0.9);
+  }
+
+  .glass-dock {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(233, 229, 223, 0.7);
+    box-shadow: 0 12px 36px -4px rgba(17, 24, 39, 0.12);
+  }
+
+  /* Distinctive Section Badge with subtle shimmer */
+  .section-pill-badge {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.95rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #475569;
+    overflow: hidden;
+  }
+
+  .section-pill-badge::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    animation: shimmerSweep 4s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  /* Animated gradient highlights */
+  .text-gradient-electric {
+    background: linear-gradient(135deg, #155EEF 0%, #1747B8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-coral {
+    background: linear-gradient(135deg, #FF6848 0%, #E54C2A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-shine {
+    background: linear-gradient(90deg, #FF6848 0%, #FF886E 25%, #155EEF 50%, #FF6848 75%, #E54C2A 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 6s linear infinite;
+  }
+
+  /* Hide scrollbar for horizontal strips */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Warm ambient dot grid */
+  .bg-dot-pattern {
+    background-image: radial-gradient(rgba(17, 24, 39, 0.07) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .bg-dot-pattern-light {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1.2px, transparent 1.2px);
+    background-size: 22px 22px;
+  }
+
+  /* Diagonal warm subtle stripes */
+  .bg-diagonal-warm {
+    background-image: repeating-linear-gradient(
+      135deg,
+      transparent,
+      transparent 38px,
+      rgba(255, 104, 72, 0.02) 38px,
+      rgba(255, 104, 72, 0.02) 40px
+    );
+  }
+
+  /* Staggered Word Upward Fade Animation */
+  @keyframes heroWordFadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(22px) scale(0.96);
+      filter: blur(4px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+  }
+
+  .animate-hero-word {
+    display: inline-block;
+    animation: heroWordFadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+    letter-spacing: -0.02em;
+  }
+
+  @keyframes shimmerSweep {
+    0% {
+      transform: translateX(-150%);
+    }
+    50%, 100% {
+      transform: translateX(250%);
+    }
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes tiltSway {
+    0%, 100% {
+      transform: rotate(-1.5deg) translateY(0);
+    }
+    50% {
+      transform: rotate(1.5deg) translateY(-8px);
+    }
+  }
+
+  .animate-tilt-sway {
+    animation: tiltSway 6s ease-in-out infinite;
+  }
+
+  @keyframes pulseGlowCoral {
+    0%, 100% {
+      box-shadow: 0 0 20px -3px rgba(255, 104, 72, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 38px 2px rgba(255, 104, 72, 0.55);
+    }
+  }
+
+  .animate-glow-coral {
+    animation: pulseGlowCoral 3s ease-in-out infinite;
+  }
+
+  @keyframes drawLine {
+    from {
+      stroke-dashoffset: 1000;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .animate-draw-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawLine 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* Cinematic Wipe Transition for Hero slides */
+  .clip-wipe-in {
+    animation: clipWipe 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  @keyframes clipWipe {
+    0% {
+      clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+      opacity: 0.8;
+    }
+    100% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      opacity: 1;
+    }
+  }
+
+  /* Editorial outline text inspired by Pinterest reference */
+  .text-stroke-ink {
+    -webkit-text-stroke: 1.5px #111827;
+    color: transparent;
+  }
+  .text-stroke-gold {
+    -webkit-text-stroke: 1.5px #D97706;
+    color: transparent;
+  }
+  .text-stroke-coral {
+    -webkit-text-stroke: 1.5px #FF6848;
+    color: transparent;
+  }
+  .text-stroke-white {
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.9);
+    color: transparent;
+  }
+
+  /* Interactive button spring feel */
+  .button-spring {
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease-out;
+  }
+  .button-spring:hover {
+    transform: translateY(-2px) scale(1.02);
+  }
+  .button-spring:active {
+    transform: translateY(1px) scale(0.97);
+  }
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
